@@ -13,7 +13,7 @@ volatile int score, high_score, lines_cleared;
 volatile uint8_t need_redraw;
 volatile uint8_t rit_tick;
 
-/* Shapes from assembly (Tetrominoes.s) */
+/* Shapes from assembly */
 extern const unsigned char I_0, I_1, I_2, I_3;
 extern const unsigned char O_0, O_1, O_2, O_3;
 extern const unsigned char T_0, T_1, T_2, T_3;
@@ -48,8 +48,7 @@ volatile uint32_t LFSR_STATE = 0x1ACEB00C;
 int main(void)
 {
     SystemInit();
-
-  
+	
     joystick_init();
     LCD_Initialization();
      
@@ -58,7 +57,7 @@ int main(void)
 	
     BUTTON_init();	
 	
-	  init_RIT(250000);
+	  init_RIT(1000000);
     enable_RIT();
 	
     TetrisView_Init();  
@@ -77,14 +76,16 @@ int main(void)
 		lines_cleared = 0;
 		
     while (1) {
-			__WFI();
+			
 			if (need_redraw) {
 					need_redraw = 0;
 					__disable_irq();
 					updateDisplay();        
            __enable_irq();
-					TetrisView_Redraw();   
+					TetrisView_Redraw(); 
+					TetrisView_Render(); 				
 			}
-			TetrisView_Render();       
+			else
+				__WFI();				
     }
 }

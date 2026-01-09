@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\Objects\Template.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\Objects\Template.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6180002: Last Updated: Wed Jan  7 17:38:53 2026
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6180002: Last Updated: Fri Jan  9 18:05:35 2026
 <BR><P>
 <H3>Maximum Stack Usage =        888 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -431,7 +431,7 @@ Global Symbols
 <BR>[Address Reference Count : 1]<UL><LI> startup_lpc17xx.o(RESET)
 </UL>
 <P><STRONG><a name="[1d]"></a>EINT1_IRQHandler</STRONG> (Thumb, 92 bytes, Stack size 8 bytes, irq_button.o(.text.EINT1_IRQHandler))
-<BR><BR>[Stack]<UL><LI>Max Depth = 564<LI>Call Chain = EINT1_IRQHandler &rArr; showNewPiece &rArr; TetrisView_Init &rArr; LCD_Clear &rArr; LCD_SetCursor &rArr; wait_delay
+<BR><BR>[Stack]<UL><LI>Max Depth = 52<LI>Call Chain = EINT1_IRQHandler &rArr; showNewPiece &rArr; checkCollision
 </UL>
 <BR>[Calls]<UL><LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;showNewPiece
 <LI><a href="#[47]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;clearBoard
@@ -439,7 +439,7 @@ Global Symbols
 <BR>[Address Reference Count : 1]<UL><LI> startup_lpc17xx.o(RESET)
 </UL>
 <P><STRONG><a name="[1e]"></a>EINT2_IRQHandler</STRONG> (Thumb, 122 bytes, Stack size 8 bytes, irq_button.o(.text.EINT2_IRQHandler))
-<BR><BR>[Stack]<UL><LI>Max Depth = 612<LI>Call Chain = EINT2_IRQHandler &rArr; checkLines &rArr; showNewPiece &rArr; TetrisView_Init &rArr; LCD_Clear &rArr; LCD_SetCursor &rArr; wait_delay
+<BR><BR>[Stack]<UL><LI>Max Depth = 100<LI>Call Chain = EINT2_IRQHandler &rArr; checkLines &rArr; showNewPiece &rArr; checkCollision
 </UL>
 <BR>[Calls]<UL><LI><a href="#[49]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;checkLines
 <LI><a href="#[48]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;checkCollision
@@ -517,7 +517,7 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[27]"></a>RIT_IRQHandler</STRONG> (Thumb, 550 bytes, Stack size 24 bytes, irq_rit.o(.text.RIT_IRQHandler))
-<BR><BR>[Stack]<UL><LI>Max Depth = 628<LI>Call Chain = RIT_IRQHandler &rArr; checkLines &rArr; showNewPiece &rArr; TetrisView_Init &rArr; LCD_Clear &rArr; LCD_SetCursor &rArr; wait_delay
+<BR><BR>[Stack]<UL><LI>Max Depth = 116<LI>Call Chain = RIT_IRQHandler &rArr; checkLines &rArr; showNewPiece &rArr; checkCollision
 </UL>
 <BR>[Calls]<UL><LI><a href="#[49]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;checkLines
 <LI><a href="#[48]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;checkCollision
@@ -549,15 +549,14 @@ Global Symbols
 <LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GUI_Text
 <LI><a href="#[4c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Clear
 </UL>
-<BR>[Called By]<UL><LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;showNewPiece
-<LI><a href="#[38]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+<BR>[Called By]<UL><LI><a href="#[38]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
 <P><STRONG><a name="[5e]"></a>TetrisView_Redraw</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, view.o(.text.TetrisView_Redraw))
 <BR><BR>[Called By]<UL><LI><a href="#[38]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[55]"></a>TetrisView_Render</STRONG> (Thumb, 596 bytes, Stack size 96 bytes, view.o(.text.TetrisView_Render))
+<P><STRONG><a name="[55]"></a>TetrisView_Render</STRONG> (Thumb, 622 bytes, Stack size 96 bytes, view.o(.text.TetrisView_Render))
 <BR><BR>[Stack]<UL><LI>Max Depth = 524<LI>Call Chain = TetrisView_Render &rArr; GUI_Text &rArr; PutChar &rArr; LCD_SetPoint &rArr; LCD_SetCursor &rArr; wait_delay
 </UL>
 <BR>[Calls]<UL><LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;u32_to_str
@@ -576,7 +575,7 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[49]"></a>checkLines</STRONG> (Thumb, 328 bytes, Stack size 48 bytes, game.o(.text.checkLines))
-<BR><BR>[Stack]<UL><LI>Max Depth = 604<LI>Call Chain = checkLines &rArr; showNewPiece &rArr; TetrisView_Init &rArr; LCD_Clear &rArr; LCD_SetCursor &rArr; wait_delay
+<BR><BR>[Stack]<UL><LI>Max Depth = 92<LI>Call Chain = checkLines &rArr; showNewPiece &rArr; checkCollision
 </UL>
 <BR>[Calls]<UL><LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;processScoring
 <LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;showNewPiece
@@ -584,6 +583,13 @@ Global Symbols
 </UL>
 <BR>[Called By]<UL><LI><a href="#[27]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RIT_IRQHandler
 <LI><a href="#[1e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EINT2_IRQHandler
+</UL>
+
+<P><STRONG><a name="[47]"></a>clearBoard</STRONG> (Thumb, 78 bytes, Stack size 8 bytes, game.o(.text.clearBoard))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = clearBoard
+</UL>
+<BR>[Called By]<UL><LI><a href="#[1d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EINT1_IRQHandler
+<LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;resetGame
 </UL>
 
 <P><STRONG><a name="[5d]"></a>enable_RIT</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, lib_rit.o(.text.enable_RIT))
@@ -602,7 +608,7 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[38]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[38]"></a>main</STRONG> (Thumb, 198 bytes, Stack size 24 bytes, main.o(.text.main))
+<P><STRONG><a name="[38]"></a>main</STRONG> (Thumb, 200 bytes, Stack size 24 bytes, main.o(.text.main))
 <BR><BR>[Stack]<UL><LI>Max Depth = 888<LI>Call Chain = main &rArr; LCD_Initialization &rArr; delay_ms
 </UL>
 <BR>[Calls]<UL><LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TetrisView_Render
@@ -628,7 +634,7 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[60]"></a>resetGame</STRONG> (Thumb, 62 bytes, Stack size 8 bytes, game.o(.text.resetGame))
-<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = resetGame
+<BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = resetGame &rArr; clearBoard
 </UL>
 <BR>[Calls]<UL><LI><a href="#[47]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;clearBoard
 </UL>
@@ -636,13 +642,12 @@ Global Symbols
 <LI><a href="#[38]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[46]"></a>showNewPiece</STRONG> (Thumb, 174 bytes, Stack size 8 bytes, game.o(.text.showNewPiece))
-<BR><BR>[Stack]<UL><LI>Max Depth = 556<LI>Call Chain = showNewPiece &rArr; TetrisView_Init &rArr; LCD_Clear &rArr; LCD_SetCursor &rArr; wait_delay
+<P><STRONG><a name="[46]"></a>showNewPiece</STRONG> (Thumb, 210 bytes, Stack size 8 bytes, game.o(.text.showNewPiece))
+<BR><BR>[Stack]<UL><LI>Max Depth = 44<LI>Call Chain = showNewPiece &rArr; checkCollision
 </UL>
 <BR>[Calls]<UL><LI><a href="#[48]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;checkCollision
 <LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;getRandom
 <LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;resetGame
-<LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TetrisView_Init
 </UL>
 <BR>[Called By]<UL><LI><a href="#[1d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EINT1_IRQHandler
 <LI><a href="#[49]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;checkLines
@@ -652,11 +657,6 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 28<LI>Call Chain = updateDisplay
 </UL>
 <BR>[Called By]<UL><LI><a href="#[38]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
-</UL>
-
-<P><STRONG><a name="[47]"></a>clearBoard</STRONG> (Thumb, 60 bytes, Stack size 0 bytes, clearboard.o(ClearBoardEmpty))
-<BR><BR>[Called By]<UL><LI><a href="#[1d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EINT1_IRQHandler
-<LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;resetGame
 </UL>
 
 <P><STRONG><a name="[5f]"></a>randomSeed</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, random_lfsr.o(RANDOM_CODE))
@@ -729,7 +729,7 @@ Local Symbols
 <BR>[Called By]<UL><LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TetrisView_Init
 </UL>
 
-<P><STRONG><a name="[42]"></a>Draw_Cell</STRONG> (Thumb, 78 bytes, Stack size 32 bytes, view.o(.text.Draw_Cell))
+<P><STRONG><a name="[42]"></a>Draw_Cell</STRONG> (Thumb, 80 bytes, Stack size 32 bytes, view.o(.text.Draw_Cell))
 <BR><BR>[Stack]<UL><LI>Max Depth = 372<LI>Call Chain = Draw_Cell &rArr; LCD_FillRect &rArr; LCD_SetCursor &rArr; wait_delay
 </UL>
 <BR>[Calls]<UL><LI><a href="#[43]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_FillRect

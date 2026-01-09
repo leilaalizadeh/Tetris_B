@@ -3,6 +3,11 @@
 #include "View.h"
 #include "Main.h"
 
+void clearBoard(void){
+	for(int r=0; r< ROWS; r++)
+		for(int c=0; c < COLS; c++)
+				board[r][c] = 0;
+}
 
 void resetGame(void) {
     clearBoard();
@@ -13,10 +18,14 @@ void resetGame(void) {
     has_active_piece = 0;
 }
 
+
 void showNewPiece(void) {
     current_type = (int)getRandom();
     current_rotation = 0;
-    current_x = 3;
+	  if(current_type == 0)
+			current_x = 3;
+		else
+			current_x = 4;
     current_y = 0;
 
     has_active_piece = 1;
@@ -28,7 +37,7 @@ void showNewPiece(void) {
         if (score > high_score) 
 					high_score = score;
         resetGame();
-				TetrisView_Init();
+				//clear();
     }
 		need_redraw = 1;
 		
@@ -41,11 +50,11 @@ void updateDisplay(void) {
     if (!has_active_piece) return;
 
     const unsigned char* shape = shapes[current_type][current_rotation];
-    for (int i = 0; i < 4; i++) {
-        for (int j = 0; j < 4; j++) {
-            if (shape[i * 4 + j] == 1) {
-                int ty = current_y + i;
-                int tx = current_x + j;
+    for (int r = 0; r < 4; r++) {
+        for (int c = 0; c < 4; c++) {
+            if (shape[r * 4 + c] == 1) {
+                int ty = current_y + r;
+                int tx = current_x + c;
                 if (ty >= 0 && ty < ROWS && tx >= 0 && tx < COLS)
                     display_grid[ty][tx] = 1;
             }
@@ -55,11 +64,11 @@ void updateDisplay(void) {
 int checkCollision(int nextX, int nextY, int nextRot) {
     const unsigned char* shapeGrid = shapes[current_type][nextRot];
 
-    for (int row = 0; row < 4; row++) {
-        for (int col = 0; col < 4; col++) {
-            if (shapeGrid[row * 4 + col] == 1) {
-                int boardX = nextX + col;
-                int boardY = nextY + row;
+    for (int r = 0; r < 4; r++) {
+        for (int c = 0; c < 4; c++) {
+            if (shapeGrid[r * 4 + c] == 1) {
+                int boardX = nextX + c;
+                int boardY = nextY + r;
 
                 if (boardX < 0 || boardX >= COLS) 
 									return 1;
@@ -95,11 +104,11 @@ static void clearLine(int row_to_clear) {
 void checkLines(void) {
     const unsigned char* shapeGrid = shapes[current_type][current_rotation];
 
-    for (int i = 0; i < 4; i++) {
-        for (int j = 0; j < 4; j++) {
-            if (shapeGrid[i * 4 + j] == 1) {
-                int by = current_y + i;
-                int bx = current_x + j;
+    for (int r = 0; r < 4; r++) {
+        for (int c = 0; c < 4;c++) {
+            if (shapeGrid[r * 4 + c] == 1) {
+                int by = current_y + r;
+                int bx = current_x + c;
                 if (by >= 0 && by < ROWS && bx >= 0 && bx < COLS)
                     board[by][bx] = 1;
             }

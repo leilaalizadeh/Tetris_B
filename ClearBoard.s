@@ -6,10 +6,10 @@ COL		RN 4
 BOARD	RN 5
 TMP1    RN 6
 		AREA    ClearBoardEmpty, CODE, READONLY
-        EXPORT  clearBoard
+        EXPORT  clearBoard1
         IMPORT  board 			
 
-clearBoard     PROC
+clearBoard1     PROC
         PUSH    {R4-R8,LR}                
         LDR 	TMP,=0             
 

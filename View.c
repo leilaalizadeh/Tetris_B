@@ -3,9 +3,8 @@
 #include "GLCD/GLCD.h" 
 #include "Main.h"
 
-/* ---- Game state provided by Game.c ---- */
 static unsigned char snap[ROWS][COLS];
-
+static unsigned char snap2[ROWS][COLS];
 /* ---- Layout ---- */
 #define CELL      10      
 #define FIELD_X   20
@@ -18,7 +17,6 @@ static unsigned char snap[ROWS][COLS];
 #define HUD_Y     20
 #define HUD_DY    15
 
-
 static unsigned char prev_grid[ROWS][COLS];
 static volatile uint8_t lcd_dirty = 1;
 static int prev_paused = -1;
@@ -28,7 +26,7 @@ extern void LCD_FillRect(uint16_t x, uint16_t y, uint16_t w, uint16_t h, uint16_
 static void Draw_Cell(int r, int c, unsigned char v) {
     uint16_t x = (uint16_t)(FIELD_X + c * CELL);
     uint16_t y = (uint16_t)(FIELD_Y + r * CELL);
-    LCD_FillRect(x, y, CELL, CELL, v ? White : Black);
+    LCD_FillRect(x, y, CELL, CELL, (v==1) ? White : Black);
 }
 
 
@@ -78,23 +76,30 @@ void TetrisView_Init(void) {
 void TetrisView_Redraw(void) {
   lcd_dirty = 1;
 }
-
+void clear(void){	
+	  for (int r = 0; r < ROWS; r++)
+    for (int c = 0; c < COLS; c++)
+      snap[r][c] = 0;
+}
 void TetrisView_Render(void) {
 	 if (!lcd_dirty) return;
 		lcd_dirty = 0;
-
+	
+	
   __disable_irq();
   for (int r = 0; r < ROWS; r++)
     for (int c = 0; c < COLS; c++)
-      snap[r][c] = display_grid[r][c];
+			snap[r][c] = (display_grid[r][c] !=0) ? 1: 0;
   __enable_irq();  
-
+			
   for (int r = 0; r < ROWS; r++) {
     for (int c = 0; c < COLS; c++) {
-      unsigned char cur = snap[r][c];
-      if (cur != prev_grid[r][c]) {
-        Draw_Cell(r, c, cur);
-        prev_grid[r][c] = cur;
+      unsigned char cur = display_grid[r][c];
+			if(cur == 1 || cur == 0){
+        if (cur != prev_grid[r][c]) {
+					Draw_Cell(r, c, cur);
+					prev_grid[r][c] = cur;
+				}
       }
     }
   }

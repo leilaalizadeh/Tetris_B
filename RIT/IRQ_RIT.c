@@ -3,8 +3,8 @@
 #include <stdint.h>
 #include "../Main.h"
 
-#define FALL_NORMAL 20
-#define FALL_FAST   10
+#define FALL_NORMAL 100   // 100 * 10ms = 1s
+#define FALL_FAST   50  //  50 * 10ms  = 0.5s
 
 static int move_counter = 0;
 static int fall_threshold = FALL_NORMAL;
