@@ -85,7 +85,6 @@ void TetrisView_Render(void) {
 	 if (!lcd_dirty) return;
 		lcd_dirty = 0;
 	
-	
   __disable_irq();
   for (int r = 0; r < ROWS; r++)
     for (int c = 0; c < COLS; c++)

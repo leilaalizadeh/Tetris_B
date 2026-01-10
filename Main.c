@@ -57,7 +57,7 @@ int main(void)
 	
     BUTTON_init();	
 	
-	  init_RIT(1000000);
+	  init_RIT(100000);
     enable_RIT();
 	
     TetrisView_Init();  
@@ -76,16 +76,14 @@ int main(void)
 		lines_cleared = 0;
 		
     while (1) {
-			
+			__WFI();
 			if (need_redraw) {
 					need_redraw = 0;
-					__disable_irq();
+//					__disable_irq();
 					updateDisplay();        
-           __enable_irq();
+//           __enable_irq();
 					TetrisView_Redraw(); 
 					TetrisView_Render(); 				
-			}
-			else
-				__WFI();				
+			}				
     }
 }

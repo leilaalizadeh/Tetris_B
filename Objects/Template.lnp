@@ -19,7 +19,6 @@
 ".\objects\touchpanel.o"
 ".\objects\tetrominoes.o"
 ".\objects\random_lfsr.o"
-".\objects\clearboard.o"
 ".\objects\dac.o"
 ".\objects\startup_lpc17xx.o"
 ".\objects\system_lpc17xx.o"

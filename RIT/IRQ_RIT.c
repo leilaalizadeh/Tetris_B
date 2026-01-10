@@ -3,8 +3,8 @@
 #include <stdint.h>
 #include "../Main.h"
 
-#define FALL_NORMAL 100   // 100 * 10ms = 1s
-#define FALL_FAST   50  //  50 * 10ms  = 0.5s
+#define FALL_NORMAL 60  // 100 * 10ms = 1s
+#define FALL_FAST   30  //  50 * 10ms  = 0.5s
 
 static int move_counter = 0;
 static int fall_threshold = FALL_NORMAL;
@@ -18,9 +18,15 @@ void RIT_IRQHandler(void)
 {
     if (game_paused == 0 && has_active_piece == 1) {
         uint8_t down_now = ((LPC_GPIO1->FIOPIN & (1 << 26)) == 0) ? 1 : 0;
-
-        int fall_threshold = down_now ? FALL_FAST : FALL_NORMAL;
-
+		   	int fall_threshold = down_now ? FALL_FAST: FALL_NORMAL;
+			
+//        int new_threshold = (down_now == 0) ? FALL_FAST : FALL_NORMAL;
+//        if (new_threshold !=fall_threshold){
+//					fall_threshold = new_threshold;
+//					if(move_counter > fall_threshold) move_counter = fall_threshold;
+//						move_counter = fall_threshold;
+//				}
+			
         move_counter++;
         if (move_counter >= fall_threshold) {
             move_counter = 0;

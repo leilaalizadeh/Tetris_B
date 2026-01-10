@@ -594,11 +594,6 @@
               <FileType>2</FileType>
               <FilePath>.\Random_LFSR.s</FilePath>
             </File>
-            <File>
-              <FileName>ClearBoard.s</FileName>
-              <FileType>2</FileType>
-              <FilePath>.\ClearBoard.s</FilePath>
-            </File>
           </Files>
         </Group>
         <Group>
