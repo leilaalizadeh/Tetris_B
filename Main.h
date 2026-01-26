@@ -17,24 +17,30 @@
 
 /* Global Variables */
 extern volatile int score, high_score, lines_cleared;
+extern volatile int current_x, current_y;
+extern volatile int current_type, current_rotation;
+
+extern volatile int game_paused;
+extern volatile int has_active_piece;
+
 extern volatile uint8_t need_redraw;
-extern volatile uint8_t rit_tick;
+
+extern volatile int base_sps;
+extern volatile uint16_t ADC_current;
+
+extern volatile int slowdown_active;
+extern volatile int slowdown_timer;
+
 extern unsigned char board[ROWS][COLS];
 extern unsigned char display_grid[ROWS][COLS];
 extern const unsigned char* shapes[7][4];
-extern volatile uint8_t need_redraw;
-extern volatile int current_x, current_y;
-extern volatile int current_type, current_rotation;
-extern volatile int score, high_score;
-extern volatile int lines_cleared;
-extern volatile int game_paused;
-extern volatile int has_active_piece;
-extern volatile uint8_t need_redraw;
 
-/* Asembly */
 
+/* Functions */
 extern int checkCollision(int next_x, int next_y, int next_rot);
 extern void updateDisplay(void);
-//extern int clearBoard(void);
-extern uint32_t getRandom();
+extern void checkLines(void);
+
+extern uint32_t getRandom(void);
+extern void randomSeed(uint32_t seed);
 extern volatile uint32_t LFSR_STATE;

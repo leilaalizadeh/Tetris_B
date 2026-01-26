@@ -15,9 +15,9 @@
   A/D IRQ: Executed when A/D Conversion is ready (signal from ADC peripheral)
  *----------------------------------------------------------------------------*/
 
-unsigned short AD_current;   
+volatile uint16_t ADC_current;   
 
 void ADC_IRQHandler(void) {
   	
-  AD_current = ((LPC_ADC->ADGDR>>4) & 0xFFF);/* Read Conversion Result  0-4095           */
+  ADC_current = ((LPC_ADC->ADGDR>>4) & 0xFFF);/* Read Conversion Result  0-4095           */
 }

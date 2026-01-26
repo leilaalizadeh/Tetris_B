@@ -10,8 +10,9 @@ void ADC_init (void) {
 
   LPC_SC->PCONP       |=  (1<<12);      /* Enable power to ADC block          */
 
-  LPC_ADC->ADCR        =  (1<< 5) |     /* select AD0.5 pin                   */
-                          (4<< 8) |     /* ADC clock is 25MHz/5               */
+  LPC_ADC->ADCR        =  (1<< 5)  |     /* select AD0.5 pin                   */
+													(1<< 16) |     /* burst = 1                          */
+                          (4<< 8)  |     /* ADC clock is 25MHz/5               */
                           (1<<21);      /* enable ADC                         */ 
 
   LPC_ADC->ADINTEN     =  (1<< 8);      /* global enable interrupt            */

@@ -72,10 +72,12 @@ void EINT1_IRQHandler(void)
 //  	state1=1;
 	
     if (has_active_piece == 0){
-        showNewPiece();
-				clearBoard();
-				game_paused = 1;
-				need_redraw = 1;
+			resetGame();         // clears board, resets counters, pauses
+			game_paused = 0;     // start running
+			showNewPiece();
+			need_redraw = 1;
+			LPC_SC->EXTINT = (1 << 1);
+			return;
 		}
 	
     game_paused = !game_paused;
@@ -111,15 +113,15 @@ void EINT2_IRQHandler(void)
 //   	last_tick2 = tick;
 //  	state2=1;
 		
-		
-    if (game_paused == 0 && has_active_piece == 1) {
-        while (checkCollision(current_x, current_y + 1, current_rotation) == 0) {
-            current_y++;
-        }
-        checkLines();
-				need_redraw = 1;
-    }
-
+		if(!slowdown_active) {
+				if (game_paused == 0 && has_active_piece == 1) {
+						while (checkCollision(current_x, current_y + 1, current_rotation) == 0) {
+								current_y++;
+								need_redraw = 1;
+						}
+						checkLines();
+				}
+	  }
     LPC_SC->EXTINT = (1 << 2);
   
 }

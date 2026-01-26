@@ -1,6 +1,6 @@
 Dependencies for Project 'Template', Target 'Target_1': (DO NOT MODIFY !)
 CompilerVersion: 6180000::V6.18::ARMCLANG
-F (.\Main.c)(0x6961461C)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections-I./RTE/Device/LPC1768-I./RTE/_Target_1-IC:/Users/aliza/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/aliza/AppData/Local/Arm/Packs/Keil/LPC1700_DFP/2.7.2/Device/Include-D__UVISION_VERSION="537" -D_RTE_ -DLPC175x_6x -D_RTE_-o ./objects/main.o -MD)
+F (.\Main.c)(0x6976CD50)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections-I./RTE/Device/LPC1768-I./RTE/_Target_1-IC:/Users/aliza/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/aliza/AppData/Local/Arm/Packs/Keil/LPC1700_DFP/2.7.2/Device/Include-D__UVISION_VERSION="537" -D_RTE_ -DLPC175x_6x -D_RTE_-o ./objects/main.o -MD)
 I (C:\Users\aliza\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.2\Device\Include\LPC17xx.h)(0x673119ED)
 I (C:\Users\aliza\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\core_cm3.h)(0x664C3AF8)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x6252C348)
@@ -11,7 +11,7 @@ I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x6252C346)
 I (C:\Users\aliza\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\m-profile\cmsis_armclang_m.h)(0x664C3AF8)
 I (C:\Users\aliza\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\m-profile\armv7m_mpu.h)(0x664C3AF8)
 I (C:\Users\aliza\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.2\Device\Include\system_LPC17xx.h)(0x673119ED)
-I (Main.h)(0x696108A9)
+I (Main.h)(0x6976A9D1)
 I (Timer\timer.h)(0x6934A040)
 I (Button\button.h)(0x6934A040)
 I (LED\led.h)(0x6934A040)
@@ -23,10 +23,10 @@ I (GLCD\GLCD.h)(0x695AD48D)
 I (TouchPanel\TouchPanel.h)(0x6934A040)
 I (DAC\DAC.h)(0x6934A040)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x6252C346)
-I (View.h)(0x6960E3B8)
-I (Game.h)(0x695E7D4F)
-F (.\Main.h)(0x696108A9)()
-F (.\Game.c)(0x69611D54)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections-I./RTE/Device/LPC1768-I./RTE/_Target_1-IC:/Users/aliza/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/aliza/AppData/Local/Arm/Packs/Keil/LPC1700_DFP/2.7.2/Device/Include-D__UVISION_VERSION="537" -D_RTE_ -DLPC175x_6x -D_RTE_-o ./objects/game.o -MD)
+I (View.h)(0x69769AFD)
+I (Game.h)(0x69769A22)
+F (.\Main.h)(0x6976A9D1)()
+F (.\Game.c)(0x6976C403)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections-I./RTE/Device/LPC1768-I./RTE/_Target_1-IC:/Users/aliza/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/aliza/AppData/Local/Arm/Packs/Keil/LPC1700_DFP/2.7.2/Device/Include-D__UVISION_VERSION="537" -D_RTE_ -DLPC175x_6x -D_RTE_-o ./objects/game.o -MD)
 I (C:\Users\aliza\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.2\Device\Include\LPC17xx.h)(0x673119ED)
 I (C:\Users\aliza\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\core_cm3.h)(0x664C3AF8)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x6252C348)
@@ -37,8 +37,8 @@ I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x6252C346)
 I (C:\Users\aliza\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\m-profile\cmsis_armclang_m.h)(0x664C3AF8)
 I (C:\Users\aliza\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\m-profile\armv7m_mpu.h)(0x664C3AF8)
 I (C:\Users\aliza\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.2\Device\Include\system_LPC17xx.h)(0x673119ED)
-I (View.h)(0x6960E3B8)
-I (Main.h)(0x696108A9)
+I (View.h)(0x69769AFD)
+I (Main.h)(0x6976A9D1)
 I (Timer\timer.h)(0x6934A040)
 I (Button\button.h)(0x6934A040)
 I (LED\led.h)(0x6934A040)
@@ -50,8 +50,8 @@ I (GLCD\GLCD.h)(0x695AD48D)
 I (TouchPanel\TouchPanel.h)(0x6934A040)
 I (DAC\DAC.h)(0x6934A040)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x6252C346)
-I (Game.h)(0x695E7D4F)
-F (.\Game.h)(0x695E7D4F)()
+I (Game.h)(0x69769A22)
+F (.\Game.h)(0x69769A22)()
 F (.\Timer\IRQ_timer.c)(0x695E6E3A)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections-I./RTE/Device/LPC1768-I./RTE/_Target_1-IC:/Users/aliza/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/aliza/AppData/Local/Arm/Packs/Keil/LPC1700_DFP/2.7.2/Device/Include-D__UVISION_VERSION="537" -D_RTE_ -DLPC175x_6x -D_RTE_-o ./objects/irq_timer.o -MD)
 I (C:\Users\aliza\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.2\Device\Include\LPC17xx.h)(0x673119ED)
 I (C:\Users\aliza\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\core_cm3.h)(0x664C3AF8)
@@ -63,7 +63,7 @@ I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x6252C346)
 I (C:\Users\aliza\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\m-profile\cmsis_armclang_m.h)(0x664C3AF8)
 I (C:\Users\aliza\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\m-profile\armv7m_mpu.h)(0x664C3AF8)
 I (C:\Users\aliza\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.2\Device\Include\system_LPC17xx.h)(0x673119ED)
-I (Timer\..\Main.h)(0x696108A9)
+I (Timer\..\Main.h)(0x6976A9D1)
 I (Timer\..\Timer\timer.h)(0x6934A040)
 I (Timer\..\Button\button.h)(0x6934A040)
 I (Timer\..\LED\led.h)(0x6934A040)
@@ -75,8 +75,8 @@ I (Timer\..\GLCD\GLCD.h)(0x695AD48D)
 I (Timer\..\TouchPanel\TouchPanel.h)(0x6934A040)
 I (Timer\..\DAC\DAC.h)(0x6934A040)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x6252C346)
-I (Timer\..\View.h)(0x6960E3B8)
-I (Timer\..\Game.h)(0x695E7D4F)
+I (Timer\..\View.h)(0x69769AFD)
+I (Timer\..\Game.h)(0x69769A22)
 F (.\Timer\lib_timer.c)(0x6934A040)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections-I./RTE/Device/LPC1768-I./RTE/_Target_1-IC:/Users/aliza/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/aliza/AppData/Local/Arm/Packs/Keil/LPC1700_DFP/2.7.2/Device/Include-D__UVISION_VERSION="537" -D_RTE_ -DLPC175x_6x -D_RTE_-o ./objects/lib_timer.o -MD)
 I (C:\Users\aliza\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.2\Device\Include\LPC17xx.h)(0x673119ED)
 I (C:\Users\aliza\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\core_cm3.h)(0x664C3AF8)
@@ -91,7 +91,7 @@ I (C:\Users\aliza\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.2\Device\Include\
 I (Timer\timer.h)(0x6934A040)
 F (.\Timer\timer.h)(0x6934A040)()
 F (.\Button\button.h)(0x6934A040)()
-F (.\Button\IRQ_button.c)(0x695D833E)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections-I./RTE/Device/LPC1768-I./RTE/_Target_1-IC:/Users/aliza/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/aliza/AppData/Local/Arm/Packs/Keil/LPC1700_DFP/2.7.2/Device/Include-D__UVISION_VERSION="537" -D_RTE_ -DLPC175x_6x -D_RTE_-o ./objects/irq_button.o -MD)
+F (.\Button\IRQ_button.c)(0x697695B7)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections-I./RTE/Device/LPC1768-I./RTE/_Target_1-IC:/Users/aliza/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/aliza/AppData/Local/Arm/Packs/Keil/LPC1700_DFP/2.7.2/Device/Include-D__UVISION_VERSION="537" -D_RTE_ -DLPC175x_6x -D_RTE_-o ./objects/irq_button.o -MD)
 I (C:\Users\aliza\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.2\Device\Include\LPC17xx.h)(0x673119ED)
 I (C:\Users\aliza\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\core_cm3.h)(0x664C3AF8)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x6252C348)
@@ -102,8 +102,8 @@ I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x6252C346)
 I (C:\Users\aliza\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\m-profile\cmsis_armclang_m.h)(0x664C3AF8)
 I (C:\Users\aliza\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\m-profile\armv7m_mpu.h)(0x664C3AF8)
 I (C:\Users\aliza\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.2\Device\Include\system_LPC17xx.h)(0x673119ED)
-I (Button\..\View.h)(0x6960E3B8)
-I (Button\..\Main.h)(0x696108A9)
+I (Button\..\View.h)(0x69769AFD)
+I (Button\..\Main.h)(0x6976A9D1)
 I (Button\..\Timer\timer.h)(0x6934A040)
 I (Button\..\Button\button.h)(0x6934A040)
 I (Button\..\LED\led.h)(0x6934A040)
@@ -115,7 +115,7 @@ I (Button\..\GLCD\GLCD.h)(0x695AD48D)
 I (Button\..\TouchPanel\TouchPanel.h)(0x6934A040)
 I (Button\..\DAC\DAC.h)(0x6934A040)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x6252C346)
-I (Button\..\Game.h)(0x695E7D4F)
+I (Button\..\Game.h)(0x69769A22)
 F (.\Button\lib_button.c)(0x6934A040)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections-I./RTE/Device/LPC1768-I./RTE/_Target_1-IC:/Users/aliza/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/aliza/AppData/Local/Arm/Packs/Keil/LPC1700_DFP/2.7.2/Device/Include-D__UVISION_VERSION="537" -D_RTE_ -DLPC175x_6x -D_RTE_-o ./objects/lib_button.o -MD)
 I (Button\button.h)(0x6934A040)
 I (C:\Users\aliza\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.2\Device\Include\lpc17xx.h)(0x673119ED)
@@ -166,7 +166,7 @@ I (C:\Users\aliza\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\m-p
 I (C:\Users\aliza\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\m-profile\armv7m_mpu.h)(0x664C3AF8)
 I (C:\Users\aliza\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.2\Device\Include\system_LPC17xx.h)(0x673119ED)
 I (joystick\joystick.h)(0x6934A040)
-F (.\RIT\IRQ_RIT.c)(0x69616499)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections-I./RTE/Device/LPC1768-I./RTE/_Target_1-IC:/Users/aliza/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/aliza/AppData/Local/Arm/Packs/Keil/LPC1700_DFP/2.7.2/Device/Include-D__UVISION_VERSION="537" -D_RTE_ -DLPC175x_6x -D_RTE_-o ./objects/irq_rit.o -MD)
+F (.\RIT\IRQ_RIT.c)(0x6976CBAF)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections-I./RTE/Device/LPC1768-I./RTE/_Target_1-IC:/Users/aliza/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/aliza/AppData/Local/Arm/Packs/Keil/LPC1700_DFP/2.7.2/Device/Include-D__UVISION_VERSION="537" -D_RTE_ -DLPC175x_6x -D_RTE_-o ./objects/irq_rit.o -MD)
 I (C:\Users\aliza\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.2\Device\Include\LPC17xx.h)(0x673119ED)
 I (C:\Users\aliza\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\core_cm3.h)(0x664C3AF8)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x6252C348)
@@ -178,7 +178,7 @@ I (C:\Users\aliza\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\m-p
 I (C:\Users\aliza\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\m-profile\armv7m_mpu.h)(0x664C3AF8)
 I (C:\Users\aliza\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.2\Device\Include\system_LPC17xx.h)(0x673119ED)
 I (RIT\RIT.h)(0x6934A040)
-I (RIT\..\Main.h)(0x696108A9)
+I (RIT\..\Main.h)(0x6976A9D1)
 I (RIT\..\Timer\timer.h)(0x6934A040)
 I (RIT\..\Button\button.h)(0x6934A040)
 I (RIT\..\LED\led.h)(0x6934A040)
@@ -190,8 +190,8 @@ I (RIT\..\GLCD\GLCD.h)(0x695AD48D)
 I (RIT\..\TouchPanel\TouchPanel.h)(0x6934A040)
 I (RIT\..\DAC\DAC.h)(0x6934A040)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x6252C346)
-I (RIT\..\View.h)(0x6960E3B8)
-I (RIT\..\Game.h)(0x695E7D4F)
+I (RIT\..\View.h)(0x69769AFD)
+I (RIT\..\Game.h)(0x69769A22)
 F (.\RIT\lib_RIT.c)(0x6934A040)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections-I./RTE/Device/LPC1768-I./RTE/_Target_1-IC:/Users/aliza/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/aliza/AppData/Local/Arm/Packs/Keil/LPC1700_DFP/2.7.2/Device/Include-D__UVISION_VERSION="537" -D_RTE_ -DLPC175x_6x -D_RTE_-o ./objects/lib_rit.o -MD)
 I (C:\Users\aliza\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.2\Device\Include\LPC17xx.h)(0x673119ED)
 I (C:\Users\aliza\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\core_cm3.h)(0x664C3AF8)
@@ -206,7 +206,7 @@ I (C:\Users\aliza\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.2\Device\Include\
 I (RIT\RIT.h)(0x6934A040)
 F (.\RIT\RIT.h)(0x6934A040)()
 F (.\ADC\adc.h)(0x6934A040)()
-F (.\ADC\IRQ_adc.c)(0x6934A040)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections-I./RTE/Device/LPC1768-I./RTE/_Target_1-IC:/Users/aliza/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/aliza/AppData/Local/Arm/Packs/Keil/LPC1700_DFP/2.7.2/Device/Include-D__UVISION_VERSION="537" -D_RTE_ -DLPC175x_6x -D_RTE_-o ./objects/irq_adc.o -MD)
+F (.\ADC\IRQ_adc.c)(0x6966A605)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections-I./RTE/Device/LPC1768-I./RTE/_Target_1-IC:/Users/aliza/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/aliza/AppData/Local/Arm/Packs/Keil/LPC1700_DFP/2.7.2/Device/Include-D__UVISION_VERSION="537" -D_RTE_ -DLPC175x_6x -D_RTE_-o ./objects/irq_adc.o -MD)
 I (C:\Users\aliza\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.2\Device\Include\LPC17xx.h)(0x673119ED)
 I (C:\Users\aliza\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\core_cm3.h)(0x664C3AF8)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x6252C348)
@@ -217,7 +217,7 @@ I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x6252C346)
 I (C:\Users\aliza\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\m-profile\cmsis_armclang_m.h)(0x664C3AF8)
 I (C:\Users\aliza\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\m-profile\armv7m_mpu.h)(0x664C3AF8)
 I (C:\Users\aliza\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.2\Device\Include\system_LPC17xx.h)(0x673119ED)
-I (ADC\..\Main.h)(0x696108A9)
+I (ADC\..\Main.h)(0x6976A9D1)
 I (ADC\..\Timer\timer.h)(0x6934A040)
 I (ADC\..\Button\button.h)(0x6934A040)
 I (ADC\..\LED\led.h)(0x6934A040)
@@ -229,9 +229,9 @@ I (ADC\..\GLCD\GLCD.h)(0x695AD48D)
 I (ADC\..\TouchPanel\TouchPanel.h)(0x6934A040)
 I (ADC\..\DAC\DAC.h)(0x6934A040)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x6252C346)
-I (ADC\..\View.h)(0x6960E3B8)
-I (ADC\..\Game.h)(0x695E7D4F)
-F (.\ADC\lib_adc.c)(0x6934A040)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections-I./RTE/Device/LPC1768-I./RTE/_Target_1-IC:/Users/aliza/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/aliza/AppData/Local/Arm/Packs/Keil/LPC1700_DFP/2.7.2/Device/Include-D__UVISION_VERSION="537" -D_RTE_ -DLPC175x_6x -D_RTE_-o ./objects/lib_adc.o -MD)
+I (ADC\..\View.h)(0x69769AFD)
+I (ADC\..\Game.h)(0x69769A22)
+F (.\ADC\lib_adc.c)(0x6966AB6F)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections-I./RTE/Device/LPC1768-I./RTE/_Target_1-IC:/Users/aliza/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/aliza/AppData/Local/Arm/Packs/Keil/LPC1700_DFP/2.7.2/Device/Include-D__UVISION_VERSION="537" -D_RTE_ -DLPC175x_6x -D_RTE_-o ./objects/lib_adc.o -MD)
 I (C:\Users\aliza\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.2\Device\Include\LPC17xx.h)(0x673119ED)
 I (C:\Users\aliza\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\core_cm3.h)(0x664C3AF8)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x6252C348)
@@ -267,7 +267,7 @@ F (.\GLCD\HzLib.c)(0x6934A040)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cor
 I (GLCD\HzLib.h)(0x6934A040)
 I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x6252C346)
 F (.\GLCD\HzLib.h)(0x6934A040)()
-F (.\View.c)(0x69616EED)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections-I./RTE/Device/LPC1768-I./RTE/_Target_1-IC:/Users/aliza/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/aliza/AppData/Local/Arm/Packs/Keil/LPC1700_DFP/2.7.2/Device/Include-D__UVISION_VERSION="537" -D_RTE_ -DLPC175x_6x -D_RTE_-o ./objects/view.o -MD)
+F (.\View.c)(0x69769AD8)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections-I./RTE/Device/LPC1768-I./RTE/_Target_1-IC:/Users/aliza/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/aliza/AppData/Local/Arm/Packs/Keil/LPC1700_DFP/2.7.2/Device/Include-D__UVISION_VERSION="537" -D_RTE_ -DLPC175x_6x -D_RTE_-o ./objects/view.o -MD)
 I (C:\Users\aliza\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.2\Device\Include\LPC17xx.h)(0x673119ED)
 I (C:\Users\aliza\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\core_cm3.h)(0x664C3AF8)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x6252C348)
@@ -279,7 +279,7 @@ I (C:\Users\aliza\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\m-p
 I (C:\Users\aliza\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\m-profile\armv7m_mpu.h)(0x664C3AF8)
 I (C:\Users\aliza\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.2\Device\Include\system_LPC17xx.h)(0x673119ED)
 I (GLCD\GLCD.h)(0x695AD48D)
-I (Main.h)(0x696108A9)
+I (Main.h)(0x6976A9D1)
 I (Timer\timer.h)(0x6934A040)
 I (Button\button.h)(0x6934A040)
 I (LED\led.h)(0x6934A040)
@@ -290,9 +290,9 @@ I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x6252C346)
 I (TouchPanel\TouchPanel.h)(0x6934A040)
 I (DAC\DAC.h)(0x6934A040)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x6252C346)
-I (View.h)(0x6960E3B8)
-I (Game.h)(0x695E7D4F)
-F (.\View.h)(0x6960E3B8)()
+I (View.h)(0x69769AFD)
+I (Game.h)(0x69769A22)
+F (.\View.h)(0x69769AFD)()
 F (.\TouchPanel\TouchPanel.c)(0x69584D55)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections-I./RTE/Device/LPC1768-I./RTE/_Target_1-IC:/Users/aliza/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/aliza/AppData/Local/Arm/Packs/Keil/LPC1700_DFP/2.7.2/Device/Include-D__UVISION_VERSION="537" -D_RTE_ -DLPC175x_6x -D_RTE_-o ./objects/touchpanel.o -MD)
 I (TouchPanel\..\GLCD\GLCD.h)(0x695AD48D)
 I (C:\Users\aliza\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.2\Device\Include\LPC17xx.h)(0x673119ED)
@@ -308,7 +308,7 @@ I (C:\Users\aliza\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.2\Device\Include\
 I (TouchPanel\..\TouchPanel\TouchPanel.h)(0x6934A040)
 F (.\TouchPanel\TouchPanel.h)(0x6934A040)()
 F (.\Tetrominoes.s)(0x69615DF0)(--target=arm-arm-none-eabi -mcpu=cortex-m3 -masm=auto -c-gdwarf-4-I./RTE/Device/LPC1768-I./RTE/_Target_1-IC:/Users/aliza/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/aliza/AppData/Local/Arm/Packs/Keil/LPC1700_DFP/2.7.2/Device/Include-Wa,armasm,--pd,"__UVISION_VERSION SETA 537" -Wa,armasm,--pd,"_RTE_ SETA 1" -Wa,armasm,--pd,"LPC175x_6x SETA 1" -Wa,armasm,--pd,"_RTE_ SETA 1"-o ./objects/tetrominoes.o)
-F (.\Random_LFSR.s)(0x695E8C1B)(--target=arm-arm-none-eabi -mcpu=cortex-m3 -masm=auto -c-gdwarf-4-I./RTE/Device/LPC1768-I./RTE/_Target_1-IC:/Users/aliza/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/aliza/AppData/Local/Arm/Packs/Keil/LPC1700_DFP/2.7.2/Device/Include-Wa,armasm,--pd,"__UVISION_VERSION SETA 537" -Wa,armasm,--pd,"_RTE_ SETA 1" -Wa,armasm,--pd,"LPC175x_6x SETA 1" -Wa,armasm,--pd,"_RTE_ SETA 1"-o ./objects/random_lfsr.o)
+F (.\Random_LFSR.s)(0x6976982C)(--target=arm-arm-none-eabi -mcpu=cortex-m3 -masm=auto -c-gdwarf-4-I./RTE/Device/LPC1768-I./RTE/_Target_1-IC:/Users/aliza/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/aliza/AppData/Local/Arm/Packs/Keil/LPC1700_DFP/2.7.2/Device/Include-Wa,armasm,--pd,"__UVISION_VERSION SETA 537" -Wa,armasm,--pd,"_RTE_ SETA 1" -Wa,armasm,--pd,"LPC175x_6x SETA 1" -Wa,armasm,--pd,"_RTE_ SETA 1"-o ./objects/random_lfsr.o)
 F (.\DAC\DAC.c)(0x6934A040)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m3 -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections-I./RTE/Device/LPC1768-I./RTE/_Target_1-IC:/Users/aliza/AppData/Local/Arm/Packs/ARM/CMSIS/6.1.0/CMSIS/Core/Include-IC:/Users/aliza/AppData/Local/Arm/Packs/Keil/LPC1700_DFP/2.7.2/Device/Include-D__UVISION_VERSION="537" -D_RTE_ -DLPC175x_6x -D_RTE_-o ./objects/dac.o -MD)
 I (C:\Users\aliza\AppData\Local\Arm\Packs\Keil\LPC1700_DFP\2.7.2\Device\Include\LPC17xx.h)(0x673119ED)
 I (C:\Users\aliza\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\core_cm3.h)(0x664C3AF8)

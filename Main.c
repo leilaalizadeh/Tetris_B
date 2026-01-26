@@ -2,16 +2,10 @@
 #include "Main.h"
 #include <stdint.h>
 #include "View.h"
-
-#define ROWS 20
-#define COLS 10
+#include "Game.h"
 
 void randomSeed(uint32_t seed);
 void resetGame(void);
-
-volatile int score, high_score, lines_cleared;
-volatile uint8_t need_redraw;
-volatile uint8_t rit_tick;
 
 /* Shapes from assembly */
 extern const unsigned char I_0, I_1, I_2, I_3;
@@ -35,15 +29,22 @@ const unsigned char* shapes[7][4] = {
     {&Z_0, &Z_1, &Z_2, &Z_3}
 };
 
+
 /* Global Variables */
-volatile int current_x, current_y;
-volatile int current_type, current_rotation;
 volatile int score = 0, high_score = 0;
 volatile int lines_cleared = 0;
+
+volatile int current_x=0, current_y=0;
+volatile int current_type=0, current_rotation=0;
+
 volatile int game_paused = 1;
 volatile int has_active_piece = 0;
+
 volatile uint8_t need_redraw = 1;
+
 volatile uint32_t LFSR_STATE = 0x1ACEB00C;
+
+volatile int base_sps = 1;
 
 int main(void)
 {
@@ -51,39 +52,54 @@ int main(void)
 	
     joystick_init();
     LCD_Initialization();
-     
-//		init_timer_SRI(3,25000,0b011);			//1ms delay
-//		enable_timer(3);
-	
     BUTTON_init();	
 	
-	  init_RIT(100000);
+    ADC_init();
+    ADC_start_conversion();
+	
+    init_RIT(100000); //10ms 
     enable_RIT();
 	
     TetrisView_Init();  
-    //updateDisplay();
-    TetrisView_Redraw();  
+   // TetrisView_Render();
 	
-    uint32_t seed = 0x12345678;
-		for (int i=0; i<200; i++) {
-			seed ^= LPC_RIT->RICOUNTER + (seed << 5) + (seed >> 2);
-		}
-		randomSeed(seed);
+    uint32_t seed = 0x1ACEB30C;
+    for (int i=0; i<200; i++) {
+        seed ^= LPC_RIT->RICOUNTER + (seed << 5) + (seed >> 2);
+    }
+    randomSeed(seed);
 		
-		resetGame();
+    resetGame();
     score = 0;
-		high_score =0;
-		lines_cleared = 0;
+    high_score = 0;
+    lines_cleared = 0;
+    need_redraw = 0;
+
+    Update_Values();
+		slowdown_active = 0;
 		
     while (1) {
-			__WFI();
-			if (need_redraw) {
-					need_redraw = 0;
-//					__disable_irq();
-					updateDisplay();        
-//           __enable_irq();
-					TetrisView_Redraw(); 
-					TetrisView_Render(); 				
-			}				
+            
+        uint16_t val;
+				__disable_irq();			
+			  val = ADC_current;
+				__enable_irq(); 
+			
+				base_sps = 1 + ((val * 4) / 4095);
+				
+				if (base_sps < 1) base_sps = 1;
+				if (base_sps > 5) base_sps = 5;
+       
+			
+        if (need_redraw) {
+            need_redraw = 0;
+					
+            __disable_irq();
+            updateDisplay();        
+            __enable_irq(); 
+					
+           	TetrisView_Redraw();			
+        }		
+				TetrisView_Render(); 				
     }
 }
