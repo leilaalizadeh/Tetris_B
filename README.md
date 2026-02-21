@@ -115,12 +115,6 @@ After game over:
 
 ---
 
-## 🔇 Music / Sound
-This edition does **not** implement speaker/music output.
-The project was developed and tested using the **SW_Debug emulator** target, where speaker output is not practically verifiable without real hardware.
-
----
-
 ## 🧱 Build & Run (Keil µVision)
 1. Open the `.uvprojx` project in **Keil µVision**
 2. Select target **`SW_Debug`**
